@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101b35">
+    <title>LPU Smart Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar" id="sidebar">
+        <div class="brand">
+            <div class="brand-icon">🎓</div>
+            <div>
+                <h2>LPU Assistant</h2>
+                <span>SMART UNIVERSITY GUIDE</span>
+            </div>
+        </div>
+
+        <button class="new-chat" id="new-chat-btn">
+            + New Conversation
+        </button>
+
+        <h3 class="section-label">EXPLORE CATEGORIES</h3>
+
+        <nav class="category-list" id="category-list">
+            <button class="category active" data-category="All">✦ All Topics</button>
+            <button class="category" data-category="University">🏛 University</button>
+            <button class="category" data-category="Admissions">📝 Admissions</button>
+            <button class="category" data-category="Academics">📚 Academics</button>
+            <button class="category" data-category="Scholarships">💰 Scholarships</button>
+            <button class="category" data-category="Hostel">🏠 Hostel</button>
+            <button class="category" data-category="Campus">🌳 Campus</button>
+            <button class="category" data-category="Examinations">📋 Examinations</button>
+            <button class="category" data-category="Placements">💼 Placements</button>
+            <button class="category" data-category="Student Support">🤝 Student Support</button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>Chat history</p>
+            <div id="history-list"></div>
+
+            <button class="clear-btn" id="clear-chat-btn">
+                🗑 Clear Conversation
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <button id="menu-btn" class="menu-btn"
+                aria-label="Toggle navigation">☰</button>
+
+            <div>
+                <h2>University Knowledge Assistant</h2>
+                <p><span class="online-dot"></span> Ready to help</p>
+            </div>
+
+            <div class="topbar-badge">LPU GUIDE</div>
+        </header>
+
+        <section class="chat-area">
+
+            <div class="welcome-section" id="welcome-section">
+                <div class="welcome-icon">🎓</div>
+                <h1>Welcome to LPU Smart Assistant</h1>
+                <p>
+                    Explore university information, academics,
+                    admissions and student support.
+                </p>
+
+                <h3>What would you like to know?</h3>
+
+                <div class="suggestion-grid">
+                    <button class="suggestion"
+                        data-question="Tell me about LPU">
+                        🏛 About LPU
+                        <span>University information</span>
+                    </button>
+
+                    <button class="suggestion"
+                        data-question="How does admission work?">
+                        📝 Admissions
+                        <span>Admission information</span>
+                    </button>
+
+                    <button class="suggestion"
+                        data-question="Tell me about scholarships">
+                        💰 Scholarships
+                        <span>Financial assistance</span>
+                    </button>
+
+                    <button class="suggestion"
+                        data-question="What hostel facilities are available?">
+                        🏠 Hostel
+                        <span>Student accommodation</span>
+                    </button>
+
+                    <button class="suggestion"
+                        data-question="Tell me about LPU placements">
+                        💼 Placements
+                        <span>Career information</span>
+                    </button>
+
+                    <button class="suggestion"
+                        data-question="What campus facilities are available?">
+                        🌳 Campus
+                        <span>Campus facilities</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chat-box" id="chat-box"
+                aria-live="polite"></div>
+
+        </section>
+
+        <section class="input-section">
+
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Ask anything about LPU..."
+                    autocomplete="off"
+                >
+
+                <button id="send-btn">➤</button>
+            </div>
+
+            <p class="disclaimer">
+                AI-style knowledge assistant · Verify current information
+                through official LPU sources.
+            </p>
+
+        </section>
+
+        <footer>
+            LPU Smart Assistant | Student Information Portal
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
